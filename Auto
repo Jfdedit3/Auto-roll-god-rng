@@ -1,0 +1,11 @@
+coroutine.wrap(function()
+while true do
+game:GetService("ReplicatedStorage").Roll:FireServer()
+  local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage").Events.Claim:InvokeServer(unpack(args))
+wait(0.1) -- attendre 0.1 seconde avant de répéter
+end
+end)()
